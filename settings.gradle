@@ -1,0 +1,3 @@
+include ':app','samplecore'
+
+project(':samplecore').projectDir=new File('sample-core')
