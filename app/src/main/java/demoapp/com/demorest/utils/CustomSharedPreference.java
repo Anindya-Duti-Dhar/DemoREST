@@ -29,6 +29,10 @@ public class CustomSharedPreference {
     private static final String PREFERENCE_USER_PASSWORD = "user_password";
     private static final String APPLICATION_USER_PASSWORD = "ap_user_password";
 
+    //update and get user preference for LOGIN_STATUS
+    private static final String PREFERENCE_USER_LOGIN_STATUS = "user_login_status";
+    private static final String APPLICATION_USER_LOGIN_STATUS = "ap_user_login_status";
+
 
     public CustomSharedPreference(Context context) {
         this._mcontext = context;
@@ -86,5 +90,19 @@ public class CustomSharedPreference {
         return ctx.getSharedPreferences(
                 CustomSharedPreference.PREFERENCE_USER_PASSWORD, Context.MODE_PRIVATE)
                 .getString(CustomSharedPreference.APPLICATION_USER_PASSWORD, "");
+    }
+
+    public static void setUserLoginStatus(final Context ctx, final String user) {
+        final SharedPreferences prefs = ctx.getSharedPreferences(
+                CustomSharedPreference.PREFERENCE_USER_LOGIN_STATUS, Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(CustomSharedPreference.APPLICATION_USER_LOGIN_STATUS, user);
+        editor.commit();
+    }
+
+    public static String getUserLoginStatus(final Context ctx) {
+        return ctx.getSharedPreferences(
+                CustomSharedPreference.PREFERENCE_USER_LOGIN_STATUS, Context.MODE_PRIVATE)
+                .getString(CustomSharedPreference.APPLICATION_USER_LOGIN_STATUS, "");
     }
 }

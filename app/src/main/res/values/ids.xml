@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Inside `res/values/ids.xml` -->
+<!-- You also need to define R.id.item_click_support using ids.xml -->
 <resources>
-    <item name="opponentsListActionBarTitle" type="id"><![CDATA[Video & Audio Chat Sample]]></item>
     <item name="item_click_support" type="id" />
 </resources>

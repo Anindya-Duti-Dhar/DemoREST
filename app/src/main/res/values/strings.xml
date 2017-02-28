@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">Demo REST</string>
+    <string name="app_name">Home Rent</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="create_account"><u>Create Now</u></string>
 
     <!-- Dialogs strings. -->
     <string name="dlg_signal_error">Disconnected… Please check your Internet connection!</string>

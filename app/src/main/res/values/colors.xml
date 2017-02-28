@@ -64,7 +64,7 @@
     <color name="reverie_bg">#f7f7f7</color>
 
     <color name="off_white">#F5F5F5</color>
-    <color name="white_text_color">#FFFFFF</color>
+    <color name="white_text_color">#ffffff</color>
     <color name="Black">#000000</color>
     <color name="android_blue">#46AEE0</color>
     <color name="ash_color">#acacac</color>
@@ -130,20 +130,7 @@
     <color name="yellow">#ffc503</color>
     <color name="soft_red">#ee2c2c</color>
 
-
-    <color name="primary">#E43F3F</color>
-    <color name="primary_dark">#E12929</color>
-    <color name="primary_darker">#CC1D1D</color>
-    <color name="accent">#FFFFFF</color>
-
-    <color name="black">#000000</color>
-    <color name="jet">#222222</color>
-    <color name="oil">#333333</color>
-    <color name="monsoon">#777777</color>
-    <color name="jumbo">#888888</color>
-    <color name="aluminum">#999999</color>
-    <color name="base">#AAAAAA</color>
-    <color name="iron">#CCCCCC</color>
-    <color name="white">#FFFFFF</color>
+    <color name="main_yellow">#fbd83a</color>
+    <color name="main_pink">#f4826a</color>
 
 </resources>

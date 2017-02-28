@@ -1,7 +1,6 @@
 package demoapp.com.demorest.activity;
 
 import android.app.PendingIntent;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
@@ -22,7 +21,6 @@ import com.quickblox.users.model.QBUser;
 
 import java.util.ArrayList;
 
-import demoapp.com.demorest.MainActivity;
 import demoapp.com.demorest.R;
 import demoapp.com.demorest.db.QbUsersDbManager;
 import demoapp.com.demorest.services.SignUpService;
@@ -37,7 +35,7 @@ public class SignupActivity extends BaseActivity {
 
     TextInputLayout inputLayoutName, inputLayoutMobile, inputLayoutPassword, inputLayoutRePassword;
     EditText _nameText, _mobileText, _passwordText, _reEnterPasswordText;
-    Button _signupButton;
+    Button _signupButton, mGPlusSignUpButton;
     String name, mobile, password;
 
     private QBUser userForSave;
@@ -58,7 +56,7 @@ public class SignupActivity extends BaseActivity {
             return;
         }
 
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.signup);
 
         mRoomName = "HomeRent";
 
@@ -75,6 +73,14 @@ public class SignupActivity extends BaseActivity {
         _reEnterPasswordText = (EditText) findViewById(R.id.input_reEnterPassword);
 
         _signupButton = (Button) findViewById(R.id.btn_signup);
+        mGPlusSignUpButton = (Button) findViewById(R.id.btn_google_signup);
+
+        mGPlusSignUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toaster.longToast("Coming Soon...");
+            }
+        });
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,6 +163,7 @@ public class SignupActivity extends BaseActivity {
         Log.d(TAG, "startNewActivity");
         hideProgressDialog();
         startActivity(new Intent(SignupActivity.this, MainActivity.class));
+        CustomSharedPreference.setUserLoginStatus(SignupActivity.this, "LoggedIn");
         finish();
         overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
