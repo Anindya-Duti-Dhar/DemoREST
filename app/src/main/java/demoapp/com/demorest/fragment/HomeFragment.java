@@ -1,6 +1,7 @@
 package demoapp.com.demorest.fragment;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.quickblox.core.QBEntityCallback;
+import com.quickblox.core.exception.QBResponseException;
+import com.quickblox.customobjects.QBCustomObjects;
+import com.quickblox.customobjects.model.QBCustomObject;
 import com.quickblox.sample.core.utils.Toaster;
 
 import java.util.ArrayList;
@@ -27,6 +32,9 @@ public class HomeFragment extends Fragment {
     ItemAdapter adapter;
     String mLocationName;
     StaggeredGridLayoutManager mStaggeredGridLayoutManager;
+
+    public FloatingActionButton content_add_fab;
+    QBCustomObject mObject;
 
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
@@ -64,6 +72,16 @@ public class HomeFragment extends Fragment {
         adapter = new ItemAdapter(getActivity(), homeItem);
         mRecyclerView.setAdapter(adapter);
 
+
+        // initializing floating action button
+        content_add_fab = (FloatingActionButton) view.findViewById(R.id.content_add_fab);
+        content_add_fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toaster.longToast("Coming Soon...");
+            }
+        });
+
         // Select item on listclick
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
                 new ItemClickSupport.OnItemClickListener() {
@@ -83,7 +101,5 @@ public class HomeFragment extends Fragment {
                     }
                 }
         );
-
-
     }
 }

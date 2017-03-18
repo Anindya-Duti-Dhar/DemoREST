@@ -46,5 +46,6 @@ dependencies {
     compile("com.quickblox:quickblox-android-sdk-content:3.2.0")
     compile ("com.quickblox:quickblox-android-sdk-customobjects:3.2.0")
     compile ("com.quickblox:quickblox-android-sdk-videochat-webrtc:3.2.0")
+    compile ("com.quickblox:quickblox-android-sdk-extensions:3.2.0")
     compile(project(":samplecore"))
 }

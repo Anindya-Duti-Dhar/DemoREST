@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // enable navigation bar tint
         tintManager.setNavigationBarTintEnabled(true);
         // set a custom tint color for all system bars
-        tintManager.setTintColor(Color.parseColor("#1a746b"));
+        tintManager.setTintColor(Color.parseColor("#f4826a"));
 
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
